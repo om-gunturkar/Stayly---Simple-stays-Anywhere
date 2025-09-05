@@ -1,49 +1,55 @@
-body{
-    font-family: "Plus Jakarta Sans",sans-serif !important;
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-.container{
-    flex:1;
+.container {
+    flex: 1;
 }
+
 /* NavBar */
-.navbar{
+.navbar {
     height: 5rem;
     background-color: white;
 }
-.fa-compass{
+
+.fa-compass {
     color: #fe424d;
     font-size: 2rem;
 }
-.nav-link{
+
+.nav-link {
     color: #222222 !important;
 }
 
 /* Footer */
-.f-info-links a{
+.f-info-links a {
     text-decoration: none;
     color: #222222;
 }
-.f-info-links a:hover{
+
+.f-info-links a:hover {
     text-decoration: underline;
 }
 
-.f-info-links, .f-info-socials, .f-info-brand{
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
 
-.f-info-socials i{
+.f-info-socials i {
     margin-right: 1rem;
     font-size: 1.2rem;
 }
 
-.f-info{
-    text-align:center;
+.f-info {
+    text-align: center;
     height: 7rem;
     background-color: #ebebeb;
     display: flex;
@@ -53,54 +59,89 @@ body{
 }
 
 /* Cards */
-.card{
+.card {
     border: none !important;
     margin-bottom: 2rem;
 }
 
-.card-img-top{
+.card-img-top {
     border-radius: 1rem !important;
-    width:100%;
-    object-fit:cover;
+    width: 100%;
+    object-fit: cover;
 }
 
-.card-body{
-    padding: 0 !important;
-
-}
-.card-text{
-    font-weight: 400 !important;
+.card-body {
+    padding: 0 !important; /* Remove default padding from card-body */
 }
 
-.listing-link{
+/* Specific Styling for Card Content to match the image */
+.card-title {
+    font-weight: bold; /* Title is bold */
+    font-size: 1.25rem; /* Good size for card title */
+    margin-top: 0.5rem; /* Small space above the title */
+    margin-bottom: 0.2rem; /* Tighten space below the title */
+    color: #222222; /* Ensure consistent text color */
+}
+
+.card-text.description {
+    line-height: 1.3; /* Tighter line spacing for the description */
+    margin-bottom: 0.3rem; /* Small space below the description */
+    font-size: 0.95rem; /* Slightly smaller font size for description */
+    color: #555555; /* Slightly muted color for description */
+}
+
+.card-text.price {
+    font-weight: 500; /* Medium boldness for the price */
+    margin-top: 0.3rem; /* Small space above the price */
+    margin-bottom: 0.3rem; /* Small space below the price */
+    font-size: 1rem; /* Standard font size for price */
+    color: #222222;
+}
+
+.card-text.location-country {
+    margin-top: 0.3rem; /* Small space above location/country */
+    margin-bottom: 0; /* No bottom margin as it's the last text element */
+    font-size: 0.95rem; /* Slightly smaller font size for location/country */
+    color: #777777; /* More muted color for location/country */
+}
+
+.listing-link {
     text-decoration: none;
 }
-/* Card Effect */
-.card-img-overlay{
-    opacity: 0;    
-}
-.card-img-overlay:hover{
-    opacity: 0.2;    
-    background-color: white;
+
+/* Card Effect (Overlay for hover) */
+.card-img-overlay {
+    opacity: 0; /* Hidden by default */
 }
 
-/* New page */
-.add-btn{
-    background-color: #fe424d !important;
-    border: none !important;
+.card-img-overlay:hover {
+    opacity: 0.2; /* Visible on hover */
+    background-color: white; /* White overlay */
 }
 
-/* Show Page */
-.show-img{
-    height: 30vh;
-
+/* New Page (Assuming this is for an "Add Listing" button) */
+.add-btn {
+    background-color: #fe424d !important; /* Specific background color */
+    border: none !important; /* No border */
 }
 
-.btns{
-    display: flex;
-
+/* Show Page (Styling for the specific listing details page) */
+.show-img {
+    height: 30vh; /* Fixed height for listing image on show page */
 }
-.show-card{
-    padding-left: 0;
-    padding-right: 0;
+
+.btns {
+    display: flex; /* Arrange buttons in a row */
+    justify-content: left; /* Center buttons horizontally */
+    align-items: center; /* Vertically align buttons */
+    margin-top: 2rem; /* Space above the button group */
+    gap: 2rem; /* Space between buttons */
+    width: auto; /* Take full width to help with centering */
+}
+
+/* Specific styling for the "Listing Details :" heading */
+.listing-details-heading {
+    font-size: 1.8rem; /* Adjust font size to match the image's heading */
+    margin-bottom: 1rem; /* Reduce space below the heading */
+    color: #222222; /* Consistent text color */
 }
